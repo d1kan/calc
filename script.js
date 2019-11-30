@@ -7,14 +7,14 @@ function checkNumbers(){
     num1 = parseInt(num1); //Проверка, что ввели int число
 
     num2 = document.getElementById('n2').value; //Вытаскиваем число 2 из input
-    num2 = parseInt(num2); //Проверка, что ввели int число
+    num2 = parseInt(num2);
 }
 
 //Функция сложения
 function plus(){
     //проверка чисел
     checkNumbers();
-    //Складываем числа
+    //Действие (в данном случае сложение) 
     result = num1 + num2;
     //перезаписываем значение тега с ид
     document.getElementById('out').innerHTML = result;

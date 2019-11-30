@@ -1,52 +1,39 @@
+//Глобальные переменные
 var num1, num2, result;
 
+//Функция для проверки чисел
+function checkNumbers(){
+    num1 = document.getElementById('n1').value; //Вытаскиваем число 1 из input
+    num1 = parseInt(num1); //Проверка, что ввели int число
+
+    num2 = document.getElementById('n2').value; //Вытаскиваем число 2 из input
+    num2 = parseInt(num2); //Проверка, что ввели int число
+}
+
+//Функция сложения
 function plus(){
-    num1 = document.getElementById('n1').value; //Достаём число из инпута
-    num1 = parseInt(num1); //Проверяем, что ввели не строку, а число
-
-    //тоже самое со вторым числом
-    num2 = document.getElementById('n2').value; 
-    num2 = parseInt(num2);
-
+    //проверка чисел
+    checkNumbers();
     //Складываем числа
     result = num1 + num2;
-
     //перезаписываем значение тега с ид
     document.getElementById('out').innerHTML = result;
 }
 
 function minus(){
-    num1 = document.getElementById('n1').value; 
-    num1 = parseInt(num1); 
-
-    num2 = document.getElementById('n2').value; 
-    num2 = parseInt(num2);
-
+    checkNumbers();
     result = num1 - num2;
-
     document.getElementById('out').innerHTML = result;
 }
 
 function multiply(){
-    num1 = document.getElementById('n1').value; 
-    num1 = parseInt(num1); 
-
-    num2 = document.getElementById('n2').value; 
-    num2 = parseInt(num2);
-
+    checkNumbers();
     result = num1 * num2;
-
     document.getElementById('out').innerHTML = result;
 }
 
 function division(){
-    num1 = document.getElementById('n1').value; 
-    num1 = parseInt(num1); 
-
-    num2 = document.getElementById('n2').value; 
-    num2 = parseInt(num2);
-
+    checkNumbers();
     result = num1 / num2;
-
     document.getElementById('out').innerHTML = result;
 }
